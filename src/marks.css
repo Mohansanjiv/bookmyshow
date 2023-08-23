@@ -1,0 +1,30 @@
+.p-txt{
+    color: rgb(255, 0, 119);
+}
+.output-box{
+    background-color: aqua;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+.student-back{
+    text-align: center;
+    width: 400px;
+    background-color: gray;
+}
+button{
+    background-color: blueviolet;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+tr,td{
+    border: 1px solid #000;
+}
+td{
+    width: 45%;
+}
+.table-hdng{
+    float:right;
+    padding: 10px 0;
+}

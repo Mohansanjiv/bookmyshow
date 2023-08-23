@@ -1,38 +1,64 @@
-.App {
+.app-row{
+  margin-bottom: 40px;
+}
+.counter-container{
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  background-color: rgb(137, 126, 146);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
+  padding: 40px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+button{
+  width: 50px;
+  background-color: aquamarine;
+  color: 000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.recomd-hdng{
+  color: #000;
+  font-size:26px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.moveName{
+  color: rgb(34, 34, 34);
+  font-family: Roboto;
+  font-size:26px;
+  font-weight: 500;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MoveType {
+  font-size: 19px;
+  color: #000;
+  margin-top: -17px;
+}
+.bookmyshowBanr{
+  display: block;
+  margin: 0 auto;
+}
+.baner-img{
+  display: block;
+  margin: 0 auto 32px;
+}
+.movieCard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  /* flex-wrap: nowrap; */
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-around;
+  /* column-gap: 20px; */
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movieCard img {
+  display: block;
+  margin: 0 0 0 0;
+  height: 378px;
+  border-radius: 10px;
 }
