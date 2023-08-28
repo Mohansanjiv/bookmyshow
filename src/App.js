@@ -3,6 +3,10 @@ import MovieCard from './MovieCard';
 import './App.css'
 
 import Example from './Example';
+// import Carosol from './Carosol';
+// import Dummy from './Dummy';
+import BuzzItem from './BuzzItem';
+import Buzz from './Buzz';
 
 
 const MovieCards = [
@@ -35,29 +39,33 @@ const MovieCards = [
 
 const  App=()=>{ 
   return (
-    <div> 
-    <Example/>
-      <p className='recomd-hdng'>Recommended Movies</p>
-      <div className='movieCard'>
-        {
-          MovieCards.map((x, index)=>{
-            return(
-                <MovieCard 
-                  movieImage={x.imgLink}   
-                  movieName={x.movieName}
-                  movieType={x.movieType}
-                ></MovieCard>            
-            )
-          })
-        }
-        
-      </div>
-      </div>
+    // <div style={{display:'flex', flexDirection:'column' ,justifyContent:'space-around'}}>
+    //     <Example/>
+    // <div> 
+    //   <p className='recomd-hdng'>Recommended Movies</p>
+    //   <div className='movieCard'>
+    //     {
+    //       MovieCards.map((x, index)=>{
+    //         return(
+    //             <MovieCard 
+    //               movieImage={x.imgLink}   
+    //               movieName={x.movieName}
+    //               movieType={x.movieType}
+    //             ></MovieCard>            
+    //         )
+    //       })
+    //     }        
+    //   </div>
+   
+      <div>
+         <Buzz/>
+      </div> 
   )
 }
 export default App
 
-
+  //  <Carosol/> 
+  //  <Dummy/>
 
   
         
