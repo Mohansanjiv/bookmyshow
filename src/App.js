@@ -1,71 +1,44 @@
 import React from 'react';
-import MovieCard from './MovieCard';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css'
+import Stream from './components/Stream';
+import Buzz from './components/Buzz';
+import Home from './Home';
+import Menubar from './Menubar';
+import Offers from './components/Offers/Offers';
+import ListYourShow from './components/LIstYourShow';
+import Sports from './components/Sports';
+import Activities from './components/Activities/Activities';
+import Events from './components/Events/Events';
+import Bengaluru from './components/Cities/Bengaluru/Bengaluru';
+import ICC from './components/IccEvents/ICC';
+import GiftCards from './components/GiftCards/GiftCards';
 
-import Example from './Example';
-// import Carosol from './Carosol';
-// import Dummy from './Dummy';
-import BuzzItem from './BuzzItem';
-import Buzz from './Buzz';
-
-
-const MovieCards = [
-  {
-      imgLink: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4xLzEwICAzMDYuM0sgVm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00331686-nwatwgbhjc-portrait.jpg",
-      movieName:"Jailer",
-      movieType:"Action/Darama/Thriller"
-  },
-  {
-      imgLink: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC40LzEwICAyMDQuMUsgVm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00338629-adeyjbxpah-portrait.jpg",
-      movieName:"Gadhar2 the katha2",
-      movieType:"Action/Darama/Period"
-  },
-  {
-    imgLink: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MTkuNksgTGlrZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00362792-dukzuaqtqf-portrait.jpg",
-    movieName:"Toby",
-    movieType:"Crime/Darama/Period"
-},
-{
-  imgLink: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC43LzEwICAxMDZLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00361712-npjeqfmyrt-portrait.jpg",
-  movieName:"OMG2",
-  movieType:"Comedy/Darama"
-},
-{
-  imgLink: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MTIzLjlLIExpa2Vz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00340111-tumdlxmhgw-portrait.jpg",
-  movieName:"Dream Girls 2",
-  movieType:"Comedy/Darama/Romantic"
-}
-];
 
 const  App=()=>{ 
   return (
-    // <div style={{display:'flex', flexDirection:'column' ,justifyContent:'space-around'}}>
-    //     <Example/>
-    // <div> 
-    //   <p className='recomd-hdng'>Recommended Movies</p>
-    //   <div className='movieCard'>
-    //     {
-    //       MovieCards.map((x, index)=>{
-    //         return(
-    //             <MovieCard 
-    //               movieImage={x.imgLink}   
-    //               movieName={x.movieName}
-    //               movieType={x.movieType}
-    //             ></MovieCard>            
-    //         )
-    //       })
-    //     }        
-    //   </div>
-   
       <div>
-         <Buzz/>
+      <BrowserRouter>
+        <Menubar></Menubar>
+         <Routes>
+         <Route path='/' element={<Bengaluru></Bengaluru>}></Route>
+           <Route  path='/stream' element={<Stream></Stream>}></Route>
+           <Route  path='/Sports' element={<Sports></Sports>}></Route>
+           <Route  path='/events' element={<Events></Events>}></Route>
+           <Route  path='/Activities' element={<Activities></Activities>}></Route>
+           <Route  path='/buzz' element={<Buzz></Buzz>}></Route>
+           <Route  path='/icc' element={<ICC></ICC>}></Route>
+           <Route  path='/listshow' element={<ListYourShow></ListYourShow>}></Route>
+           <Route  path='/offers' element={<Offers></Offers>}></Route>
+           <Route  path='/GiftCards' element={<GiftCards></GiftCards>}></Route>
+           
+         </Routes>
+      </BrowserRouter>
       </div> 
   )
 }
 export default App
 
-  //  <Carosol/> 
-  //  <Dummy/>
 
   
         

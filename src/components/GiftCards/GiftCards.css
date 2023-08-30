@@ -1,0 +1,33 @@
+.gift_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 19px;
+}
+img {
+    width: 269px;
+}
+.gift-p1{
+    text-align: center;
+    font-size: 28px;
+    width:100%;
+}
+
+.selectGift_list {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 0 auto 25px;
+}
+.selectGift_list li {
+    border-radius: 24px;
+    border: 2px solid #b8b8b8;
+    list-style-type: none;
+    padding: 3px 23px;
+}
+.selectGift_list li a{
+    text-decoration: none;
+}
